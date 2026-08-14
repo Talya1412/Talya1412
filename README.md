@@ -8,34 +8,32 @@ Building dev tools that make supply chains less fragile.
 
 ---
 
-## 🔭 What I build
+## What I build
 
-**[mcpdoctor](https://github.com/Talya1412/mcpdoctor)** — the `npm audit` for your MCP server stack. One command finds the dead, stale, zombie and insecure servers wired into your agent configs, pins your versions, and monitors uptime.
+**[mcpdoctor](https://github.com/Talya1412/mcpdoctor)** - the `npm audit` for MCP server stacks. One command finds stale, insecure, missing, and unreachable servers in agent configurations.
+
+**[repomark](https://github.com/Talya1412/repomark)** - an offline, evidence-first CLI for repository readiness and regression checks. It scans local files and Git metadata, explains every score with evidence, and produces terminal, Markdown, HTML, JSON, and SVG reports.
 
 ```sh
-npx mcpdoctor-audit
+npx repomark .
 ```
 
-```text
-name           verdict   version   reason
-filesystem     OK        1.2.3     healthy
-github         STALE     0.5.0     last publish 142 days ago
-legacy-tool    ZOMBIE    0.1.0     no publish in 400 days
-deprecated-x   INSECURE  1.0.0     CVE-2025-XXXXX: known vulnerability
-ghost-server   MISSING   -         package not found on npm
-remote-api     UNREACHABLE -        HTTP 502
-```
+## Focus
 
-## 📌 Pinned
+- Supply-chain and repository health tooling
+- TypeScript and Node.js CLIs
+- Offline-first developer workflows
+- Evidence-based diagnostics and automation
 
-- [mcpdoctor](https://github.com/Talya1412/mcpdoctor) · npm audit for MCP servers · TypeScript
+## Selected projects
 
-## Stack
-
-`TypeScript` · `Node.js` · CLI tooling · MCP ecosystem
+| Project | What it does | Stack |
+| --- | --- | --- |
+| [mcpdoctor](https://github.com/Talya1412/mcpdoctor) | Audit MCP server configurations | TypeScript, Node.js |
+| [repomark](https://github.com/Talya1412/repomark) | Score repository readiness with local evidence | TypeScript, Node.js |
 
 ---
 
 <div align="center">
-<i>MCP servers are the new supply chain — 52% are dead, 75% ship a known-CVE dep. Someone has to check.</i>
+<i>Tools should explain what they know, what they found, and what needs attention.</i>
 </div>
